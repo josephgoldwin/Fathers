@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>St. Mary's Parish — RC Church</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <style>
+    .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+    .fade-up.show { opacity: 1; transform: translateY(0); }
+    tr:hover { background-color: rgba(13,110,253,0.1); transition: background-color 0.3s ease; }
+    .btn-animate:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: all 0.3s ease; }
+    .card-animate:hover { transform: scale(1.03); box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: all 0.4s ease; }
+    .hero-img { height: 80vh; object-fit: cover; width: 100%; filter: brightness(0.7);}
+    .hero-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;}
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#home">
+      <img src="assets/img/churchh.avif" alt="Logo" width="50" height="50" class="rounded-circle me-2 border border-primary">
+      <div>
+        <h5 class="mb-0">St. Mary's Parish</h5>
+        <small class="text-primary">Roman Catholic Church</small>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#fathers">Fathers</a></li>
+        <li class="nav-item"><a class="nav-link" href="#prices">Mass Price</a></li>
+        <li class="nav-item"><a class="nav-link" href="#register">Register</a></li>
+        <li class="nav-item"><a class="nav-link" href="#bible">Bible Reading</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<section id="home" class="position-relative">
+  <img src="assets/img/elangulam.jpg" class="hero-img" alt="Church">
+  <div class="hero-text">
+    <h1 class="display-5 fw-bold">Welcome to St. Mary's Parish</h1>
+    <p class="lead">Join our Masses, ministries, and community events at St. Mary's Parish in Elangulam, Tamil Nadu</p>
+  </div>
+</section>
+
+
+<section id="fathers" class="container py-5">
+  <h2 class="text-center mb-4 text-primary">Our Fathers & Mass Timings</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card card-animate text-center p-3">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle mx-auto d-block" style="width:100px;height:100px;border:4px solid #0d6efd;" alt="Father Promildon">
+        <h5 class="mt-3 text-primary">Father Promildon Lobo</h5>
+        <p>Parish Priest</p>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="selectedFather" value="Father Promildon Lobo - 06:00">
+          <label class="form-check-label">06:00 AM</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="selectedFather" value="Father Promildon Lobo - 18:00">
+          <label class="form-check-label">06:00 PM</label>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card card-animate text-center p-3">
+        <img src="https://randomuser.me/api/portraits/men/45.jpg" class="rounded-circle mx-auto d-block" style="width:100px;height:100px;border:4px solid #6f42c1;" alt="Father Antro">
+        <h5 class="mt-3 text-purple">Father Antro Revin</h5>
+        <p>Assistant Priest</p>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="selectedFather" value="Father Antro Revin - 07:00">
+          <label class="form-check-label">07:00 AM</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="selectedFather" value="Father Antro Revin - 19:00">
+          <label class="form-check-label">07:00 PM</label>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card card-animate text-center p-3">
+        <img src="https://randomuser.me/api/portraits/men/67.jpg" class="rounded-circle mx-auto d-block" style="width:100px;height:100px;border:4px solid #d63384;" alt="Father Anbuselvan">
+        <h5 class="mt-3 text-danger">Father Anbuselvan</h5>
+        <p>Youth Ministry</p>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="selectedFather" value="Father Anbuselvan - 08:00">
+          <label class="form-check-label">08:00 AM</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="selectedFather" value="Father Anbuselvan - 20:00">
+          <label class="form-check-label">08:00 PM</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="text-center mt-4">St. Mary's Parish, Elangulam, Tamil Nadu, India | Phone: +91-7856789123 | Email: elangulam25@stmarys.com</p>
+</section>
+
+<!-- Mass Price -->
+<section id="prices" class="container py-5">
+  <h2 class="text-center mb-4 text-success">Mass Price List</h2>
+  <div class="row text-center g-3 justify-content-center">
+    <div class="col-md-2"><div class="card card-animate p-3 bg-warning"><h6>Sunday Mass</h6><p>₹500</p></div></div>
+    <div class="col-md-2"><div class="card card-animate p-3 bg-danger text-white"><h6>Daily Mass</h6><p>₹200</p></div></div>
+    <div class="col-md-2"><div class="card card-animate p-3 bg-primary text-white"><h6>Marriage Mass</h6><p>₹5000</p></div></div>
+    <div class="col-md-2"><div class="card card-animate p-3 bg-danger text-white"><h6>Die Mass</h6><p>₹3000</p></div></div>
+    <div class="col-md-2"><div class="card card-animate p-3 bg-secondary text-white"><h6>Birthday Mass</h6><p>₹2000</p></div></div>
+  </div>
+</section>
+
+<!-- Event Registration -->
+<section id="register" class="container py-5">
+  <h2 class="text-center mb-4 text-primary">Event Registration</h2>
+  <div class="card p-4 mb-4 card-animate">
+    <form id="regForm">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Full Name" name="name" required>
+        </div>
+        <div class="col-md-6">
+          <input type="tel" class="form-control" placeholder="Phone" name="phone" pattern="[0-9]{10,15}" required>
+        </div>
+      </div>
+      <div class="mb-3 mt-3">
+        <label>Upload Image:</label>
+        <input type="file" class="form-control" name="photo" accept="image/*">
+      </div>
+      <div class="mb-3">
+        <label>Event / Sacrament:</label>
+        <select class="form-select" name="event" required>
+          <option>Sunday Mass</option>
+          <option>Daily Mass</option>
+          <option>Marriage Mass</option>
+          <option>Die Mass</option>
+          <option>Birthday Mass</option>
+        </select>
+      </div>
+      <button class="btn btn-primary btn-animate" type="submit">Register</button>
+    </form>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-bordered text-center">
+      <thead class="table-primary">
+        <tr>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Photo</th>
+          <th>Father Mass</th>
+          <th>Mass Price</th>
+          <th>Event</th>
+        </tr>
+      </thead>
+      <tbody id="regTableBody"></tbody>
+    </table>
+  </div>
+
+  <div class="d-flex justify-content-center gap-2 mt-3">
+    <button onclick="downloadCSV()" class="btn btn-success btn-animate">Download CSV</button>
+    <button onclick="downloadTXT()" class="btn btn-info btn-animate">Download TXT</button>
+  </div>
+</section>
+
+<!-- Bible Reading -->
+<section id="bible" class="container py-5">
+  <h2 class="text-center mb-4 text-purple">Bible Reading Registration</h2>
+  <div class="card p-4 mb-4 card-animate">
+    <form id="bibleForm">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Your Name" name="readerName" required>
+        </div>
+        <div class="col-md-6">
+          <select class="form-select" name="reading" required>
+            <option value="">Select Reading</option>
+            <option value="First Reading">First Reading</option>
+            <option value="Second Reading">Second Reading</option>
+          </select>
+        </div>
+      </div>
+      <div class="row g-3 mt-3">
+        <div class="col-md-6"><input type="date" class="form-control" name="date" required></div>
+        <div class="col-md-6"><input type="time" class="form-control" name="time" required></div>
+      </div>
+      <button class="btn btn-purple btn-animate mt-3" type="submit" style="background-color:#6f42c1;color:white;">Register</button>
+    </form>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-bordered text-center">
+      <thead class="table-purple" style="background-color:#6f42c1;color:white;">
+        <tr>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>Reading</th>
+          <th>Date</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody id="bibleTableBody"></tbody>
+    </table>
+  </div>
+
+  <div class="d-flex justify-content-center gap-2 mt-3">
+    <button onclick="downloadBibleCSV()" class="btn btn-success btn-animate">Download Bible CSV</button>
+    <button onclick="downloadBibleTXT()" class="btn btn-info btn-animate">Download Bible TXT</button>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact" class="bg-dark text-white text-center py-4">
+  <p>&copy; 2025 St. Mary's Parish | All Rights Reserved</p>
+  <p>Address: St Mary's Parish, Elangulam, Tamil Nadu, India</p>
+  <p>Phone: +91-7856789123 | Email: elangulam25@stmarys.com</p>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.querySelectorAll('.fade-up').forEach(f => {
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('show'); obs.unobserve(entry.target); } });
+  }, {threshold:0.3});
+  observer.observe(f);
+});
+
+// Registration JS
+const regForm = document.getElementById('regForm');
+const regTableBody = document.getElementById('regTableBody');
+let regCount = 0, regData = [];
+regForm.addEventListener('submit', e=>{
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(regForm).entries());
+  const selectedFather = document.querySelector('input[name="selectedFather"]:checked');
+  if(!selectedFather) return alert("Select a Father Mass time!");
+  regCount++;
+  const priceMap = { "Sunday Mass":500, "Daily Mass":200, "Marriage Mass":5000, "Die Mass":3000, "Birthday Mass":2000 };
+  const price = priceMap[data.event] || 0;
+  const row = document.createElement('tr');
+  const file = regForm.querySelector('input[name="photo"]').files[0];
+  if(file){
+    const reader = new FileReader();
+    reader.onload = function(ev){
+      row.innerHTML = `<td>${regCount}</td><td>${data.name}</td><td>${data.phone}</td>
+                       <td><img src="${ev.target.result}" style="width:50px;height:50px;border-radius:50%;"></td>
+                       <td>${selectedFather.value}</td><td>₹${price}</td><td>${data.event}</td>`;
+      regTableBody.appendChild(row);
+      regData.push({SNo:regCount, Name:data.name, Phone:data.phone, Photo:ev.target.result, FatherMass:selectedFather.value, MassPrice:price, Event:data.event});
+    }
+    reader.readAsDataURL(file);
+  } else {
+    row.innerHTML = `<td>${regCount}</td><td>${data.name}</td><td>${data.phone}</td><td>No Image</td>
+                     <td>${selectedFather.value}</td><td>₹${price}</td><td>${data.event}</td>`;
+    regTableBody.appendChild(row);
+    regData.push({SNo:regCount, Name:data.name, Phone:data.phone, Photo:"", FatherMass:selectedFather.value, MassPrice:price, Event:data.event});
+  }
+  regForm.reset();
+});
+
+// CSV/TXT
+function downloadCSV(){
+  if(!regData.length){ alert("No registrations yet!"); return; }
+  const csv = [Object.keys(regData[0]).join(','), ...regData.map(d=>Object.values(d).join(','))].join('\n');
+  const blob = new Blob([csv], {type:'text/csv'});
+  const a = document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='registrations.csv'; a.click();
+}
+function downloadTXT(){
+  if(!regData.length){ alert("No registrations yet!"); return; }
+  const txt = regData.map(d=>JSON.stringify(d)).join('\n');
+  const blob = new Blob([txt], {type:'text/plain'});
+  const a = document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='registrations.txt'; a.click();
+}
+
+// Bible Reading
+const bibleForm = document.getElementById('bibleForm');
+const bibleTableBody = document.getElementById('bibleTableBody');
+let bibleCount = 0;
+bibleForm.addEventListener('submit', e=>{
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(bibleForm).entries());
+  bibleCount++;
+  const row = document.createElement('tr');
+  row.innerHTML = `<td>${bibleCount}</td><td>${data.readerName}</td><td>${data.reading}</td><td>${data.date}</td><td>${data.time}</td>`;
+  bibleTableBody.appendChild(row);
+});
+
+// Bible CSV/TXT
+function downloadBibleCSV(){
+  const bibleData = Array.from(bibleTableBody.querySelectorAll('tr')).map(tr=>{
+    const tds = tr.querySelectorAll('td');
+    return {SNo:tds[0].innerText, Name:tds[1].innerText, Reading:tds[2].innerText, Date:tds[3].innerText, Time:tds[4].innerText};
+  });
+  if(!bibleData.length){ alert("No Bible registrations yet!"); return; }
+  const csv = [Object.keys(bibleData[0]).join(','), ...bibleData.map(d=>Object.values(d).join(','))].join('\n');
+  const blob = new Blob([csv], {type:'text/csv'});
+  const a = document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='bible_registrations.csv'; a.click();
+}
+
+function downloadBibleTXT(){
+  const bibleData = Array.from(bibleTableBody.querySelectorAll('tr')).map(tr=>{
+    const tds = tr.querySelectorAll('td');
+    return {SNo:tds[0].innerText, Name:tds[1].innerText, Reading:tds[2].innerText, Date:tds[3].innerText, Time:tds[4].innerText};
+  });
+  if(!bibleData.length){ alert("No Bible registrations yet!"); return; }
+  const txt = bibleData.map(d=>JSON.stringify(d)).join('\n');
+  const blob = new Blob([txt], {type:'text/plain'});
+  const a = document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='bible_registrations.txt'; a.click();
+}
+</script>
+</body>
+</html>

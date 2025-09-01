@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>St. Mary's Parish — RC Church</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+<style>
+.fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.fade-up.show { opacity: 1; transform: translateY(0); }
+tr:hover { background-color: rgba(59,130,246,0.1); transition: background-color 0.3s ease; }
+.btn-animate:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: all 0.3s ease; }
+.card-animate:hover { transform: scale(1.03); box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: all 0.4s ease; }
+</style>
+</head>
+<body class="bg-gradient-to-b from-indigo-50 to-purple-50 text-gray-800">
+
+<!-- HEADER WITH RESPONSIVE TOGGLE -->
+<header class="bg-white shadow sticky top-0 z-50">
+  <div class="container mx-auto px-4 py-3 flex flex-wrap md:flex-nowrap items-center justify-between">
+    <a href="#home" class="flex items-center gap-3">
+      <img src="assets/img/churchh.avif" alt="Logo" class="w-20 h-20 rounded-full border-2 border-indigo-600">
+      <div>
+        <h1 class="text-lg font-bold text-indigo-700">St. Mary's Parish</h1>
+        <p class="text-xs text-indigo-700">Roman Catholic Church</p>
+      </div>
+    </a>
+
+    <!-- Toggle button -->
+    <button id="navToggle" class="md:hidden text-gray-700 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <!-- Navbar -->
+    <nav id="navMenu" class="w-full md:w-auto mt-2 md:mt-0 flex flex-col md:flex-row gap-2 md:gap-6 font-medium text-gray-700 justify-center md:justify-end hidden md:flex">
+      <a href="#home" class="hover:text-indigo-600 transition">Home</a>
+      <a href="#fathers" class="hover:text-indigo-600 transition">Fathers</a>
+      <a href="#prices" class="hover:text-indigo-600 transition">Mass Price</a>
+      <a href="#register" class="hover:text-indigo-600 transition">Register</a>
+      <a href="#bible" class="hover:text-indigo-600 transition">Bible Reading</a>
+      <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="relative h-[60vh] md:h-[80vh] overflow-hidden">
+  <img src="assets/img/elangulam.jpg" alt="Church Background" class="w-full h-full object-cover brightness-90">
+  <div class="absolute inset-0 flex items-center justify-center text-center text-white">
+    <div class="fade-up">
+      <h2 class="text-3xl md:text-5xl font-bold drop-shadow-lg text-blue-500">Welcome to St. Mary's Parish</h2>
+      <p class="mt-3 md:text-lg drop-shadow-md text-white-700">Join our Masses, ministries, and community events at St. Mary's Parish in Elangulam, Tamil Nadu</p>
+    </div>
+  </div>
+</section>
+
+<!-- FATHERS / MASS -->
+<section id="fathers" class="container mx-auto px-4 py-12">
+  <h2 class="text-3xl font-bold text-center mb-8 text-indigo-700 fade-up">Our Fathers & Mass Timings</h2>
+  <div class="grid md:grid-cols-3 gap-6">
+    <article class="bg-gradient-to-br from-indigo-100 to-indigo-200 rounded-xl shadow p-6 text-center card-animate fade-up">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-28 h-28 mx-auto rounded-full border-4 border-indigo-600 shadow" alt="Father John">
+      <h3 class="mt-4 text-lg font-semibold text-indigo-900">Father Promildon Lobo</h3>
+      <p class="text-sm text-gray-700 mb-2">Parish Priest</p>
+      <label class="block"><input type="radio" name="selectedFather" value="Father Promildon Lobo - 06:00" class="mr-2">06:00 AM</label>
+      <label class="block"><input type="radio" name="selectedFather" value="Father Promildon Lobo - 18:00" class="mr-2">06:00 PM</label>
+    </article>
+    <article class="bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl shadow p-6 text-center card-animate fade-up">
+      <img src="https://randomuser.me/api/portraits/men/45.jpg" class="w-28 h-28 mx-auto rounded-full border-4 border-purple-600 shadow" alt="Father Peter">
+      <h3 class="mt-4 text-lg font-semibold text-purple-900">Father Antro Revin</h3>
+      <p class="text-sm text-gray-700 mb-2">Assistant Priest</p>
+      <label class="block"><input type="radio" name="selectedFather" value="Father Antro Revin - 07:00" class="mr-2">07:00 AM</label>
+      <label class="block"><input type="radio" name="selectedFather" value="Father Antro Revin - 19:00" class="mr-2">07:00 PM</label>
+    </article>
+    <article class="bg-gradient-to-br from-pink-100 to-pink-200 rounded-xl shadow p-6 text-center card-animate fade-up">
+      <img src="https://randomuser.me/api/portraits/men/67.jpg" class="w-28 h-28 mx-auto rounded-full border-4 border-pink-600 shadow" alt="Father Mathew">
+      <h3 class="mt-4 text-lg font-semibold text-pink-900">Father Anbuselvan</h3>
+      <p class="text-sm text-gray-700 mb-2">Youth Ministry</p>
+      <label class="block"><input type="radio" name="selectedFather" value="Father Anbuselvan - 08:00" class="mr-2">08:00 AM</label>
+      <label class="block"><input type="radio" name="selectedFather" value="Father Anbuselvan - 20:00" class="mr-2">08:00 PM</label>
+    </article>
+  </div>
+  <div class="text-center text-gray-700 mt-6 fade-up">
+    <p>St. Mary's Parish, Elangulam, Tamil Nadu, India</p>
+    <p>Phone: +91-7856789123 | Email: elangulam25@stmarys.com</p>
+  </div>
+</section>
+
+<!-- MASS PRICE LIST -->
+<section id="prices" class="container mx-auto px-4 py-12 fade-up">
+  <h2 class="text-3xl font-bold text-center mb-8 text-green-700">Mass Price List</h2>
+  <div class="grid md:grid-cols-5 gap-6 text-center">
+    <div class="bg-yellow-100 rounded-lg shadow p-4 card-animate"><h3 class="font-semibold text-lg">Sunday Mass</h3><p class="mt-2 text-green-700 font-bold">₹500</p></div>
+    <div class="bg-red-100 rounded-lg shadow p-4 card-animate"><h3 class="font-semibold text-lg">Daily Mass</h3><p class="mt-2 text-red-700 font-bold">₹200</p></div>
+    <div class="bg-blue-100 rounded-lg shadow p-4 card-animate"><h3 class="font-semibold text-lg">Marriage Mass</h3><p class="mt-2 text-blue-700 font-bold">₹5000</p></div>
+    <div class="bg-red-100 rounded-lg shadow p-4 card-animate"><h3 class="font-semibold text-lg">Die Mass</h3><p class="mt-2 text-red-700 font-bold">₹3000</p></div>
+    <div class="bg-purple-100 rounded-lg shadow p-4 card-animate"><h3 class="font-semibold text-lg">Birthday Mass</h3><p class="mt-2 text-purple-700 font-bold">₹2000</p></div>
+  </div>
+</section>
+
+<!-- EVENT REGISTRATION -->
+<section id="register" class="container mx-auto px-4 py-12 fade-up">
+  <h2 class="text-3xl font-bold text-center mb-6 text-indigo-700">Event Registration</h2>
+  <div class="max-w-3xl mx-auto bg-white rounded-xl shadow p-6 mb-6 card-animate">
+    <form id="regForm" class="space-y-4">
+      <div class="grid md:grid-cols-2 gap-4">
+        <input type="text" name="name" placeholder="Full Name" required class="p-2 border rounded w-full transition focus:ring-2 focus:ring-indigo-400" />
+        <input type="tel" name="phone" placeholder="Phone" pattern="[0-9]{10,15}" required class="p-2 border rounded w-full transition focus:ring-2 focus:ring-indigo-400" />
+      </div>
+      <label class="block mt-4">Upload Image:
+        <input type="file" name="photo" accept="image/*" class="mt-1 p-2 border rounded w-full" />
+      </label>
+      <label class="block mt-4">Event / Sacrament:
+        <select name="event" class="mt-1 p-2 border rounded w-full transition focus:ring-2 focus:ring-indigo-400" required>
+          <option value="Sunday Mass">Sunday Mass</option>
+          <option value="Daily Mass">Daily Mass</option>
+          <option value="Marriage Mass">Marriage Mass</option>
+          <option value="Die Mass">Die Mass</option>
+          <option value="Birthday Mass">Birthday Mass</option>
+        </select>
+      </label>
+      <button type="submit" class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded btn-animate">Register</button>
+    </form>
+  </div>
+
+  <!-- Table -->
+  <div class="overflow-x-auto">
+    <table class="min-w-full bg-white rounded-xl shadow text-center">
+      <thead class="bg-indigo-600 text-white">
+        <tr>
+          <th class="px-4 py-2">S.No</th>
+          <th class="px-4 py-2">Name</th>
+          <th class="px-4 py-2">Phone</th>
+          <th class="px-4 py-2">Photo</th>
+          <th class="px-4 py-2">Father Mass</th>
+          <th class="px-4 py-2">Mass Price</th>
+          <th class="px-4 py-2">Event</th>
+        </tr>
+      </thead>
+      <tbody id="regTableBody"></tbody>
+    </table>
+  </div>
+
+  <div class="flex gap-4 justify-center my-6">
+    <button onclick="downloadCSV()" class="bg-green-600 text-white px-4 py-2 rounded btn-animate">Download CSV</button>
+    <button onclick="downloadTXT()" class="bg-blue-600 text-white px-4 py-2 rounded btn-animate">Download TXT</button>
+  </div>
+</section>
+
+<!-- BIBLE READING FORM -->
+<section id="bible" class="container mx-auto px-4 py-12 fade-up">
+  <h2 class="text-3xl font-bold text-center mb-6 text-purple-700">Bible Reading Registration</h2>
+  <div class="max-w-3xl mx-auto bg-white rounded-xl shadow p-6 mb-6 card-animate">
+    <form id="bibleForm" class="space-y-4">
+      <div class="grid md:grid-cols-2 gap-4">
+        <input type="text" name="readerName" placeholder="Your Name" required class="p-2 border rounded w-full transition focus:ring-2 focus:ring-purple-400" />
+        <select name="reading" class="p-2 border rounded w-full transition focus:ring-2 focus:ring-purple-400" required>
+          <option value="">Select Reading</option>
+          <option value="First Reading">First Reading</option>
+          <option value="Second Reading">Second Reading</option>
+        </select>
+      </div>
+      <div class="grid md:grid-cols-2 gap-4 mt-4">
+        <input type="date" name="date" required class="p-2 border rounded w-full transition focus:ring-2 focus:ring-purple-400" />
+        <input type="time" name="time" required class="p-2 border rounded w-full transition focus:ring-2 focus:ring-purple-400" />
+      </div>
+      <button type="submit" class="mt-4 bg-purple-600 text-white px-4 py-2 rounded btn-animate">Register</button>
+    </form>
+  </div>
+
+  <div class="overflow-x-auto">
+    <table class="min-w-full bg-white rounded-xl shadow text-center">
+      <thead class="bg-purple-600 text-white">
+        <tr>
+          <th class="px-4 py-2">S.No</th>
+          <th class="px-4 py-2">Name</th>
+          <th class="px-4 py-2">Reading</th>
+          <th class="px-4 py-2">Date</th>
+          <th class="px-4 py-2">Time</th>
+        </tr>
+      </thead>
+      <tbody id="bibleTableBody"></tbody>
+    </table>
+  </div>
+
+  <div class="flex justify-center my-6 gap-4">
+    <button onclick="downloadBibleCSV()" class="bg-green-600 text-white px-4 py-2 rounded btn-animate">Download Bible CSV</button>
+    <button onclick="downloadBibleTXT()" class="bg-blue-600 text-white px-4 py-2 rounded btn-animate">Download Bible TXT</button>
+  </div>
+</section>
+
+<!-- CONTACT / FOOTER -->
+<footer id="contact" class="bg-gray-900 text-white py-8 text-center">
+  <p>&copy; 2025 St. Mary's Parish | All Rights Reserved</p>
+  <div class="flex justify-center mt-4"> 
+    Address: St Mary's Parish, Elangulam, Tamil Nadu, India
+  </div>   
+  <div class="flex justify-center mt-2">
+    Phone: +91-7856789123 | Email: elangulam25@stmarys.com
+  </div>
+</footer>
+
+<script>
+// Navbar toggle for mobile
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
+navToggle.addEventListener('click', () => { navMenu.classList.toggle('hidden'); });
+
+// Scroll animation
+document.querySelectorAll('.fade-up').forEach(f => {
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){ entry.target.classList.add('show'); obs.unobserve(entry.target);}
+    });
+  }, {threshold:0.3});
+  observer.observe(f);
+});
+
+// Registration logic
+const regForm = document.getElementById('regForm');
+const regTableBody = document.getElementById('regTableBody');
+let regCount = 0, regData = [];
+regForm.addEventListener('submit', e=>{
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(regForm).entries());
+  const selectedFather = document.querySelector('input[name="selectedFather"]:checked');
+  if(!selectedFather) return alert("Select a Father Mass time!");
+  let [fatherName, hourStr] = selectedFather.value.split(' - ');
+  let [hour, minute] = hourStr.split(':').map(Number);
+  let ampm = hour >= 12 ? "PM" : "AM";
+  hour = hour % 12 || 12;
+  let displayTime = `${fatherName} - ${hour.toString().padStart(2,'0')}:${minute.toString().padStart(2,'0')} ${ampm}`;
+  const file = regForm.querySelector('input[name="photo"]').files[0];
+  regCount++;
+  const priceMap = { "Sunday Mass":500, "Daily Mass":200, "Marriage Mass":5000, "Die Mass":3000, "Birthday Mass":2000 };
+  const price = priceMap[data.event] || 0;
+  const row = document.createElement('tr');
+  if(file){
+    const reader = new FileReader();
+    reader.onload = function(ev){
+      row.innerHTML = `<td class="px-4 py-2">${regCount}</td>
+                       <td class="px-4 py-2">${data.name}</td>
+                       <td class="px-4 py-2">${data.phone}</td>
+                       <td class="px-4 py-2"><img src="${ev.target.result}" class="w-20 h-25 object-cover rounded-full mx-auto"/></td>
+                       <td class="px-4 py-2">${displayTime}</td>
+                       <td class="px-4 py-2">₹${price}</td>
+                       <td class="px-4 py-2">${data.event}</td>`;
+      regTableBody.appendChild(row);
+      regData.push({SNo: regCount, Name: data.name, Phone: data.phone, Photo: ev.target.result, FatherMass: displayTime, MassPrice: price, Event: data.event});
+    }
+    reader.readAsDataURL(file);
+  } else {
+    row.innerHTML = `<td class="px-4 py-2">${regCount}</td>
+                     <td class="px-4 py-2">${data.name}</td>
+                     <td class="px-4 py-2">${data.phone}</td>
+                     <td class="px-4 py-2">No Image</td>
+                     <td class="px-4 py-2">${displayTime}</td>
+                     <td class="px-4 py-2">₹${price}</td>
+                     <td class="px-4 py-2">${data.event}</td>`;
+    regTableBody.appendChild(row);
+    regData.push({SNo: regCount, Name: data.name, Phone: data.phone, Photo:"", FatherMass: displayTime, MassPrice: price, Event: data.event});
+  }
+  regForm.reset();
+});
+
+// CSV & TXT
+function downloadCSV(){
+  if(!regData.length){ alert("No registrations yet!"); return;}
+  const csv = [Object.keys(regData[0]).join(','), ...regData.map(d=>Object.values(d).join(','))].join('\n');
+  const blob = new Blob([csv], {type:'text/csv'});
+  const a = document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='registrations.csv'; a.click();
+}
+function downloadTXT(){
+  if(!regData.length){ alert("No registrations yet!"); return;}
+  const txt = regData.map(d=>JSON.stringify(d)).join('\n');
+  const blob = new Blob([txt], {type:'text/plain'});
+  const a = document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='registrations.txt'; a.click();
+}
+
+// Bible reading
+const bibleForm = document.getElementById('bibleForm');
+const bibleTableBody = document.getElementById('bibleTableBody');
+let bibleCount = 0;
+bibleForm.addEventListener('submit', e=>{
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(bibleForm).entries());
+  bibleCount++;
+  const row = document.createElement('tr');
+  row.innerHTML = `<td class="px-4 py-2">${bibleCount}</td>
+                   <td class="px-4 py-2">${data.readerName}</td>
+                   <td class="px-4 py-2">${data.reading}</td>
+                   <td class="px-4 py-2">${data.date}</td>
+                   <td class="px-4 py-2">${data.time}</td>`;
+  bibleTableBody.appendChild(row);
+});
+
+// Bible CSV & TXT download
+function downloadBibleCSV(){
+  const bibleData = [];
+  document.querySelectorAll("#bibleTableBody tr").forEach((tr)=>{
+    const tds = tr.querySelectorAll("td");
+    bibleData.push({
+      SNo: tds[0].innerText,
+      Name: tds[1].innerText,
+      Reading: tds[2].innerText,
+      Date: tds[3].innerText,
+      Time: tds[4].innerText
+    });
+  });
+  if(!bibleData.length){ alert("No Bible registrations yet!"); return; }
+  const csv = [Object.keys(bibleData[0]).join(','), ...bibleData.map(d=>Object.values(d).join(','))].join('\n');
+  const blob = new Blob([csv], {type:'text/csv'});
+  const a = document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='bible_registrations.csv'; a.click();
+}
+
+function downloadBibleTXT(){
+  const bibleData = [];
+  document.querySelectorAll("#bibleTableBody tr").forEach((tr)=>{
+    const tds = tr.querySelectorAll("td");
+    bibleData.push({
+      SNo: tds[0].innerText,
+      Name: tds[1].innerText,
+      Reading: tds[2].innerText,
+      Date: tds[3].innerText,
+      Time: tds[4].innerText
+    });
+  });
+  if(!bibleData.length){ alert("No Bible registrations yet!"); return; }
+  const txt = bibleData.map(d => JSON.stringify(d)).join('\n');
+  const blob = new Blob([txt], {type:'text/plain'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'bible_registrations.txt';
+  a.click();
+}
+</script>
+</body>
+</html>
